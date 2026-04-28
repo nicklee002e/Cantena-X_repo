@@ -19,12 +19,13 @@
         button:hover { background: #3b8ddf; }
         pre { background: #000; padding: 15px; border-radius: 6px; overflow-x: auto; color: #0f0; }
         .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; background: #2f9e44; color: #fff; margin-bottom: 10px; }
+        .logo-bottom-right { position: fixed; bottom: 20px; right: 20px; width: 150px; opacity: 0.9; z-index: 1000; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Web3Creator Real-time PCF Flow (Catena-X & CBAM)</h1>
+            <h1>Real-time PCF Flow (Catena-X & CBAM)</h1>
             <p>Data Collector -> PCF Translator -> EDC Connector</p>
         </div>
         
@@ -68,6 +69,8 @@
             </div>
         </div>
     </div>
+    
+    <img src="/Web3Creators_Logo.png" alt="Web3Creator Logo" class="logo-bottom-right">
 
     <script>
         async function calculatePCF() {
