@@ -4,9 +4,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import random
 import time
-import os
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = FastAPI(title="Antigravity Mockup Server (Catena-X & CBAM)")
 
@@ -100,13 +97,7 @@ def get_aas_pcf():
         }
     }
 
-@app.get("/")
-def read_root():
-    return FileResponse(os.path.join(BASE_DIR, "dashboard.html"))
 
-@app.get("/dashboard.html")
-def read_dashboard():
-    return FileResponse(os.path.join(BASE_DIR, "dashboard.html"))
 
 if __name__ == "__main__":
     import uvicorn
