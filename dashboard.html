@@ -81,7 +81,7 @@
             };
 
             try {
-                const res = await fetch('http://localhost:8000/api/v1/pcf/calculate', {
+                const res = await fetch('/api/v1/pcf/calculate', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
@@ -95,7 +95,7 @@
 
         async function fetchAAS() {
             try {
-                const res = await fetch('http://localhost:8000/api/v1/aas/submodels/pcf');
+                const res = await fetch('/api/v1/aas/submodels/pcf');
                 const data = await res.json();
                 document.getElementById('aas-output').innerText = JSON.stringify(data, null, 2);
             } catch (err) {
